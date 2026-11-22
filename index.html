@@ -1,1 +1,491 @@
-<h1>miprimerapagin<h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura | Cocina de Autor & Brasas</title>
+  <!-- Fuentes modernas de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Prata&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de Notificación Superior -->
+  <div class="top-banner">
+    <div class="container banner-content">
+      <span class="live-dot"></span>
+      <span id="liveStatusText">Verificando horario del restaurante...</span>
+      <span class="banner-divider">•</span>
+      <span>Cenas y Almuerzos Exclusivos • Reservas abiertas</span>
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="brand-logo">
+        <span class="brand-symbol">
+          <!-- Icono SVG de fuego/llama minimalista -->
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"></path>
+          </svg>
+        </span>
+        <span class="brand-name">AURA</span>
+        <span class="brand-tag">BISTRO</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#experiencia" class="nav-link">Experiencia</a>
+        <a href="#menu" class="nav-link">La Carta</a>
+        <a href="#reservas" class="nav-link">Reservaciones</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Botón de Pedido / Carrito -->
+        <button class="cart-btn" id="openCartBtn" aria-label="Ver pedido">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-text">Mi Pedido</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="#reservas" class="btn btn-primary nav-reserve-btn">Mesa</a>
+
+        <!-- Botón Móvil -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Principal -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-pattern"></div>
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-icon">✦</span>
+        <span>Gastronomía Sensorial & Fuego Vivo</span>
+      </div>
+      <h1 class="hero-title">
+        Donde la tradición culinaria encuentra la alta vanguardia
+      </h1>
+      <p class="hero-description">
+        Ingredientes de huerto orgánico, cocciones pacientes sobre carbón de encina y una curaduría de vinos diseñada para despertar cada sentido.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#reservas" class="btn btn-primary btn-lg">
+          <span>Reservar una Mesa</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#menu" class="btn btn-outline btn-lg">
+          <span>Explorar la Carta</span>
+        </a>
+      </div>
+
+      <!-- Métricas / Sellos del restaurante -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Ingredientes de Temporada</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4.9 ★</div>
+          <div class="stat-label">Excelencia Gourmet (850+ reseñas)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">48h</div>
+          <div class="stat-label">Maduración en Seco Propia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Filosofía / Experiencia -->
+  <section class="section experience" id="experiencia">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">NUESTRA ESENCIA</span>
+        <h2 class="section-title">El Arte de Servir Memorias</h2>
+        <p class="section-desc">Diseñamos una atmósfera íntima donde cada detalle, aroma y textura tiene un propósito definido.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Cocina de Autor</h3>
+          <p>Platos que honran raíces mediterráneas y latinoamericanas reinterpretadas con técnicas contemporáneas de precisión.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"></path>
+            </svg>
+          </div>
+          <h3>Brasas de Roble</h3>
+          <p>Cortes seleccionados y vegetales asados lentamente al humo de maderas nobles para impregnar perfiles únicos.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 22h8M12 11v11M19 3H5l2.5 8h9L19 3z"></path>
+            </svg>
+          </div>
+          <h3>Mixología y Cava</h3>
+          <p>Coctelería botánica artesanal y una bodega con más de 120 etiquetas de productores independientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Menú Interactivo -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">NUESTRA PROPUESTA</span>
+        <h2 class="section-title">La Carta</h2>
+        <p class="section-desc">Selecciona entre nuestras creaciones del chef o filtra por categorías. Puedes añadir platos directamente a tu pedido.</p>
+      </div>
+
+      <!-- Filtros y Búsqueda -->
+      <div class="menu-controls">
+        <div class="menu-categories" id="menuCategories">
+          <button class="cat-pill active" data-cat="todos">Todos</button>
+          <button class="cat-pill" data-cat="entradas">Entradas</button>
+          <button class="cat-pill" data-cat="brasas">Brasas & Carnes</button>
+          <button class="cat-pill" data-cat="mar">Mar & Costas</button>
+          <button class="cat-pill" data-cat="postres">Postres</button>
+          <button class="cat-pill" data-cat="cocteles">Coctelería</button>
+        </div>
+
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="menuSearch" placeholder="Buscar por plato, ingrediente...">
+        </div>
+      </div>
+
+      <!-- Contenedor del Menú Generado Dinámicamente por JS -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Renderizado dinámicamente con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Reservas -->
+  <section class="section reservation-section" id="reservas">
+    <div class="container">
+      <div class="reservation-wrapper">
+        <div class="reservation-info">
+          <span class="section-subtitle">MOMENTOS EXCLUSIVOS</span>
+          <h2 class="section-title">Reserva tu Experiencia</h2>
+          <p>
+            Te recomendamos reservar con anticipación para asegurar mesa en el salón principal o en nuestra terraza climatizada.
+          </p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <strong>Horario de Atención</strong>
+                <p>Martes a Domingo: 13:00 - 16:30 | 19:30 - 23:45</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <strong>Contacto Directo</strong>
+                <p>+57 (601) 892-4410 • reservas@aurabistro.com</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <strong>Ubicación</strong>
+                <p>Carrera 11 # 85 - 24, Zona Gastronómica Alta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario Interactivo -->
+        <div class="reservation-card">
+          <h3>Confirmación en Línea</h3>
+          <p class="card-subtitle">Recibirás tu código de confirmación al instante.</p>
+
+          <form id="reservationForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resName">Nombre Completo</label>
+                <input type="text" id="resName" required placeholder="Ej. Camila Morales">
+              </div>
+              <div class="form-group">
+                <label for="resPhone">Teléfono / WhatsApp</label>
+                <input type="tel" id="resPhone" required placeholder="+57 300 123 4567">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resDate">Fecha</label>
+                <input type="date" id="resDate" required>
+              </div>
+              <div class="form-group">
+                <label for="resTime">Hora de Reserva</label>
+                <select id="resTime" required>
+                  <option value="" disabled selected>Selecciona hora</option>
+                  <option value="13:00">13:00 (Almuerzo)</option>
+                  <option value="13:30">13:30 (Almuerzo)</option>
+                  <option value="14:00">14:00 (Almuerzo)</option>
+                  <option value="19:30">19:30 (Cena)</option>
+                  <option value="20:00">20:00 (Cena)</option>
+                  <option value="20:30">20:30 (Cena)</option>
+                  <option value="21:15">21:15 (Cena)</option>
+                  <option value="22:00">22:00 (Cena)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resGuests">Número de Personas</label>
+                <div class="guests-picker">
+                  <button type="button" class="guest-btn" id="decreaseGuests">-</button>
+                  <span id="guestsCountDisplay">2 Personas</span>
+                  <input type="hidden" id="resGuests" value="2">
+                  <button type="button" class="guest-btn" id="increaseGuests">+</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resArea">Preferencia de Ambiente</label>
+                <select id="resArea">
+                  <option value="Salón Principal (Íntimo y Clásico)">Salón Principal (Íntimo y Clásico)</option>
+                  <option value="Terraza Jardín (Al aire libre)">Terraza Jardín (Al aire libre)</option>
+                  <option value="Barra del Chef (Experiencia cercana)">Barra del Chef (Experiencia cercana)</option>
+                  <option value="Cava Privada (Reuniones especiales)">Cava Privada (Reuniones especiales)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="resNotes">Ocasión o Alergias Alimentarias (Opcional)</label>
+              <textarea id="resNotes" rows="2" placeholder="Cumpleaños, aniversario, celiaquía, etc."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Confirmar Reservación</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas / Comentarios -->
+  <section class="section reviews-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">OPINIONES</span>
+        <h2 class="section-title">Palabras de Nuestros Comensales</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"El Ojo de Bife con mantequilla de trufas es de otro mundo. La atención es de un restaurante estrella y la coctelería con botánicos locales superó todas mis expectativas."</p>
+          <div class="reviewer">
+            <span class="reviewer-avatar">SC</span>
+            <div>
+              <strong>Sofía Carranza</strong>
+              <span>Crítica Gastronómica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Celebramos nuestro aniversario en la terraza. El ambiente iluminado con velas sutiles y la recomendación del sommelier hicieron que la noche fuera verdaderamente inolvidable."</p>
+          <div class="reviewer">
+            <span class="reviewer-avatar">MR</span>
+            <div>
+              <strong>Mateo Restrepo</strong>
+              <span>Visita Verificada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"La burrata ahumada y el postre volcán de avellanas con sal marina son obligatorios. Un espacio sofisticado pero sin pretensiones exageradas."</p>
+          <div class="reviewer">
+            <span class="reviewer-avatar">VL</span>
+            <div>
+              <strong>Valentina López</strong>
+              <span>Comensal Frecuente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de Página y Contacto -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="brand-logo">
+          <span class="brand-symbol">
+            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z"></path>
+            </svg>
+          </span>
+          <span class="brand-name">AURA</span>
+        </div>
+        <p>Alta cocina sobre brasas, ingredientes sostenibles y hospitalidad sin límites.</p>
+        <div class="social-links">
+          <span class="social-tag">Instagram: @aurabistro</span>
+          <span class="social-tag">TikTok: @aurabistrogourmet</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horarios</h4>
+        <ul class="footer-list">
+          <li><strong>Mar - Jue:</strong> 13:00 - 23:00</li>
+          <li><strong>Vie - Sáb:</strong> 13:00 - 00:00</li>
+          <li><strong>Domingos:</strong> 12:30 - 18:00</li>
+          <li><strong>Lunes:</strong> Cerrado por mantenimiento</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ubicación & Contacto</h4>
+        <ul class="footer-list">
+          <li>Carrera 11 # 85 - 24, Bogotá</li>
+          <li>Teléfono: +57 (601) 892-4410</li>
+          <li>Email: contacto@aurabistro.com</li>
+          <li>Valet Parking disponible en la entrada</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 AURA Bistró & Brasas. Todos los derechos reservados.</p>
+      <p class="footer-credit">Diseñado con HTML5, CSS3 puro y JavaScript moderno • Sin imágenes raster</p>
+    </div>
+  </footer>
+
+  <!-- Drawer Lateral del Pedido (Cart Drawer) -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <h3>Tu Selección</h3>
+      </div>
+      <button class="close-btn" id="closeCartBtn" aria-label="Cerrar pedido">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsContainer">
+      <!-- Items generados dinámicamente -->
+    </div>
+
+    <div class="drawer-footer" id="cartFooter">
+      <div class="cart-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0</span>
+        </div>
+        <div class="total-row">
+          <span>Servicio sugerido (10%)</span>
+          <span id="cartTip">$0</span>
+        </div>
+        <div class="total-row total-highlight">
+          <span>Total Estimado</span>
+          <span id="cartTotal">$0</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="checkoutBtn">
+        <span>Proceder con el Pedido</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <button class="btn-clear" id="clearCartBtn">Vaciar selección</button>
+    </div>
+  </aside>
+
+  <!-- Modal de Confirmación de Reserva -->
+  <div class="modal-backdrop" id="reservationModalBackdrop">
+    <div class="modal-box">
+      <div class="modal-badge-icon">
+        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" fill="none" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <h3 class="modal-title">¡Mesa Confirmada con Éxito!</h3>
+      <p class="modal-subtitle">Hemos reservado tu espacio en AURA. Te esperamos con los brazos abiertos.</p>
+
+      <div class="reservation-ticket" id="reservationTicket">
+        <!-- Rellenado por JavaScript con los datos de la reserva -->
+      </div>
+
+      <button class="btn btn-primary btn-block" id="closeResModalBtn">
+        Entendido y Guardar
+      </button>
+    </div>
+  </div>
+
+  <!-- Contenedor de Notificaciones Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
